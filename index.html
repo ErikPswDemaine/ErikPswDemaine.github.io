@@ -94,10 +94,12 @@
 
 
 
+<meta name="description" content="Open your eyes,look up to the skies">
 <meta property="og:type" content="website">
 <meta property="og:title" content="BLOG">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="Open your eyes,look up to the skies">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
@@ -260,12 +262,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/27/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/mount.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -279,7 +281,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/27/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2020/06/14/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" itemprop="url">微分方程</a></h1>
         
 
         <div class="post-meta">
@@ -291,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-27T19:42:54+08:00">
-                2020-06-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-14T14:10:33+08:00">
+                2020-06-14
               </time>
             
 
@@ -331,19 +333,161 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>通过某些变量的变化率来求出原始函数的表达式 <em>变化率比较好表达</em></p>
+<ol>
+<li><p>例如自由落体，物体始终受重力，加速度为$g$</p>
+<script type="math/tex; mode=display">
+\begin{array}{c}
+\ddot{y}(t)=-g \quad \dot{y}(t)=-g t+v_{0} \\
+y(t)=-(1 / 2) g t^{2}+v_{0} t+y_{0}
+\end{array}</script><p>如已知位移对时间的二阶导数，则可以对两边积分，得到一阶导数和原始函数</p>
+</li>
+<li><p>天体运动，引力大小和方向都在变化，用如下方程来描述</p>
+<script type="math/tex; mode=display">
+{F_{1}=m_{1} \overrightarrow{\mathbf{a}}_{1}}=G m_{1} m_{2}\left(\frac{\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}}{\left\|\overrightarrow{\mathrm{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|}\right)\left(\frac{1}{\left\|\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|^{2}}\right)</script><p>引力是矢量，用如下单位向量来描述方向</p>
+<script type="math/tex; mode=display">
+\frac{\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}}{\left\|\overrightarrow{\mathrm{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|}</script></li>
+</ol>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+    
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+    
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/01/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/01/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" itemprop="url">矩阵乘法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-01T13:20:01+08:00">
+                2020-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h1><p>数学中，矩阵乘法 (英语：matrix multiplication) 是一种根据两个矩阵得到第三个矩阵的二元运算, 第三个矩阵即前两者的乘积, 称为矩阵积 (英语：matrix product) 。设$A$是  $n \times m$  的矩阵,  $B$  是 $ m \times p $ 的矩阵, 则它们的矩阵积  $AB$  是 $n \times p$  的矩阵。  $A$  中每一行的 $m$ 个元素都与 $B$ 中对应列的  $m $ 个元素对应相乘, 这 些乘积的和就是AB中的一个元素。</p>
+<p>矩阵可以用来表示线性映射，矩阵积则可以用来表示线性映射的复合。因此, 矩阵乘法是线性代数的基础工具, 不仅在数学中有大量应用, 在应用数学、物理学、 工程学等领域也有广泛使用。</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+C &=A B=\left(\begin{array}{ccc}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{array}\right)\left(\begin{array}{cc}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{array}\right) \\
+&=\left(\begin{array}{cc}
+1 \times 1+2 \times 2+3 \times 3 & 1 \times 4+2 \times 5+3 \times 6 \\
+4 \times 1+5 \times 2+6 \times 3 & 4 \times 4+5 \times 5+6 \times 6
+\end{array}\right) \\
+&=\left(\begin{array}{cc}
+14 & 32 \\
+32 & 77
+\end{array}\right)
+\end{aligned}</script><p><del>只是测试latex公式</del></p>
 
           
         
@@ -413,11 +557,11 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/mount.png"
                alt="Shiwei Pan" />
           <p class="site-author-name" itemprop="name">Shiwei Pan</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -425,7 +569,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -525,6 +669,8 @@
   
 
 
+  
+
 
 
 
@@ -552,6 +698,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -626,6 +775,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
