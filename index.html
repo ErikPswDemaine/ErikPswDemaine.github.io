@@ -380,8 +380,6 @@
 <p>在我们的变换函数中如果有一个点经过函数变换后得到的仍是其本身，那我们的图形就不再前进，这个点就是不动点</p>
 <p>写成矩阵形式为</p>
 <p>$\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \\<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \\<br>0<br>\end{array}\right)$</p>
-<p>化简得</p>
-<p>$ \left(\begin{array}{c}<br>x \\y<br>\end{array}\right) = \left( \begin{array}{c} ( \sqrt { 2 } - 1 ) ( x - y ) + 2 - \sqrt { 2 }  \  ( \sqrt { 2 } - 1 ) ( x + y )  \end{array}\right)$</p>
 <p>于是得到一个二元一次方程组</p>
 <p>$\left\{\begin{array}{l}<br> (\sqrt { 2 } - 2 ) x - ( \sqrt { 2 } - 1 ) y + 2 - \sqrt { 2 } = 0  \\<br>(\sqrt { 2 } - 1 ) x + ( \sqrt { 2 } - 2 ) y = 0<br>\end{array}\right.$</p>
 <p>解得</p>
@@ -405,15 +403,15 @@
 <p>这是一个几何级数，所以</p>
 <p>$\sum_{n=0}^{\infty} z^{n}=\frac{1}{(1-z)}$</p>
 <p>其中</p>
-<p>$\begin{align<em>}z&amp;=a e^{(\pi / 4) i}\\&amp;=(2-\sqrt{2})(\cos (\pi / 4)+i \sin (\pi / 4))\\&amp;=(2-\sqrt{2})((\sqrt{2} / 2)+(\sqrt{2} / 2) i)\\&amp;=<br>(\sqrt{2}-1)(1+i)\end{align</em>}$</p>
+<p>$\begin{aligned}z&amp;=a e^{(\pi / 4) i}\\&amp;=(2-\sqrt{2})(\cos (\pi / 4)+i \sin (\pi / 4))\\&amp;=(2-\sqrt{2})((\sqrt{2} / 2)+(\sqrt{2} / 2) i)\\&amp;=<br>(\sqrt{2}-1)(1+i)\end{aligned}$</p>
 <p>$a=2-\sqrt{2}=2 /(2+\sqrt{2})$</p>
 <p>所以我们的不动点为</p>
-<p>$\begin{align<em>}P&amp;=(2-\sqrt{2}) \frac{1}{1-(\sqrt{2}-1)(1+i)}\\&amp;=\frac{2}{2+\sqrt{2}} \frac{1}{(2-\sqrt{2})-(\sqrt{2}-1) i}\\&amp;=\frac{2}{2-\sqrt{2} i}\end{align</em>}$</p>
+<p>$\begin{aligned}P&amp;=(2-\sqrt{2}) \frac{1}{1-(\sqrt{2}-1)(1+i)}\\&amp;=\frac{2}{2+\sqrt{2}} \frac{1}{(2-\sqrt{2})-(\sqrt{2}-1) i}\\&amp;=\frac{2}{2-\sqrt{2} i}\end{aligned}$</p>
 <p>同时乘以共轭复数</p>
-<p>$\begin{align<em>}P&amp;=\frac{2}{2-\sqrt{2} i} \frac{2+\sqrt{2} i}{2+\sqrt{2} i}\\&amp;=\frac{4+2 \sqrt{2} i}{6}\\&amp;=\frac{2}{3}+\frac{\sqrt{2}}{3} i\end{align</em>}$</p>
+<p>$\begin{aligned}P&amp;=\frac{2}{2-\sqrt{2} i} \frac{2+\sqrt{2} i}{2+\sqrt{2} i}\\&amp;=\frac{4+2 \sqrt{2} i}{6}\\&amp;=\frac{2}{3}+\frac{\sqrt{2}}{3} i\end{aligned}$</p>
 <p>这和我们用矩阵方法求解的答案是一样的</p>
 <h3 id="对数螺线"><a href="#对数螺线" class="headerlink" title="对数螺线"></a>对数螺线</h3><p>计算螺线上任意一点$P_n$到不动点$P$的距离</p>
-<p>$\begin{align<em>}<br>\left|P-P_{n}\right|&amp;=\left|a \sum_{k=n}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|=\left|a\left(a e^{\frac{\pi}{4} i}\right)^{n} \sum_{k=0}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|\\&amp;=\left|(2-\sqrt{2})((\sqrt{2}-1)(1+i))^{n}\right| \cdot|P|\\&amp;=(2-\sqrt{2})((\sqrt{2}-1) \sqrt{2})^{n} \frac{\sqrt{6}}{3}\\&amp;=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{n+1}\end{align</em>}$</p>
+<p>$\begin{aligned}<br>\left|P-P_{n}\right|&amp;=\left|a \sum_{k=n}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|=\left|a\left(a e^{\frac{\pi}{4} i}\right)^{n} \sum_{k=0}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|\\&amp;=\left|(2-\sqrt{2})((\sqrt{2}-1)(1+i))^{n}\right| \cdot|P|\\&amp;=(2-\sqrt{2})((\sqrt{2}-1) \sqrt{2})^{n} \frac{\sqrt{6}}{3}\\&amp;=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{n+1}\end{aligned}$</p>
 <p>这是一个几何级数，而对数螺线的臂的距离以几何级数递增，所以螺线是对数螺线</p>
 <p>实际上，它的方程在极坐标系中表示为</p>
 <p>$r(\theta)=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{\frac{4}{\pi}(\theta-\pi-\arctan (\sqrt{2} / 2))}$</p>
