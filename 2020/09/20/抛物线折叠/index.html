@@ -94,23 +94,31 @@
 
 
 
-<meta name="description" content="1.在正方形中折出等边三角形 要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法 如何让三角形最大呢   如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上 如果有顶点落在边上，可以平移该三角形，使其某一顶点落在正方形的任意顶点上  所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形  画出图形，由几何关系，三角形的边长$l$可以用$">
+<meta name="description" content="5.抛物线折叠取一张纸，将边线当做线$L$，在纸上取点$P$，将$P$折叠到$L$上，对应点为$P’$，压出折痕，如下图所示  观察折痕所形成的图形  看上去像是一条抛物线，但我们需要严格证明 分析： 以$O$为原点建立坐标系，使得$p$点坐标为$(0,1)$，$p’$点的坐标为$(t,1)$，下面求折线的方程 因为折线$l$是$pp’$的中垂线 $\left. { k_{pp^ { \prime">
 <meta property="og:type" content="article">
-<meta property="og:title" content="等边三角形">
-<meta property="og:url" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/index.html">
+<meta property="og:title" content="抛物线折叠">
+<meta property="og:url" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="1.在正方形中折出等边三角形 要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法 如何让三角形最大呢   如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上 如果有顶点落在边上，可以平移该三角形，使其某一顶点落在正方形的任意顶点上  所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形  画出图形，由几何关系，三角形的边长$l$可以用$">
+<meta property="og:description" content="5.抛物线折叠取一张纸，将边线当做线$L$，在纸上取点$P$，将$P$折叠到$L$上，对应点为$P’$，压出折痕，如下图所示  观察折痕所形成的图形  看上去像是一条抛物线，但我们需要严格证明 分析： 以$O$为原点建立坐标系，使得$p$点坐标为$(0,1)$，$p’$点的坐标为$(t,1)$，下面求折线的方程 因为折线$l$是$pp’$的中垂线 $\left. { k_{pp^ { \prime">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png">
-<meta property="og:image" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png">
-<meta property="og:image" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191335187.png">
-<meta property="og:image" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png">
-<meta property="og:image" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif">
-<meta property="article:published_time" content="2020-08-12T04:33:19.213Z">
-<meta property="article:modified_time" content="2020-08-28T01:12:58.021Z">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125312126.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125843676.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905131930.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905135205746.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/x2.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191017432.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191224070.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191320876.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191604321.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905192011346.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/pic.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png">
+<meta property="article:published_time" content="2020-09-20T13:25:55.280Z">
+<meta property="article:modified_time" content="2020-09-13T10:07:35.368Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125312126.png">
 
 
 
@@ -139,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/08/12/等边三角形/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/09/20/抛物线折叠/"/>
 
 
 
 
 
-  <title>等边三角形 | BLOG</title>
+  <title>抛物线折叠 | BLOG</title>
   
 
 
@@ -268,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -285,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">等边三角形</h1>
+          <h1 class="post-title" itemprop="name headline">抛物线折叠</h1>
         
 
         <div class="post-meta">
@@ -297,8 +305,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-12T12:33:19+08:00">
-                2020-08-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-20T21:25:55+08:00">
+                2020-09-20
               </time>
             
 
@@ -335,31 +343,52 @@
       
 
       
-        <h1 id="1-在正方形中折出等边三角形"><a href="#1-在正方形中折出等边三角形" class="headerlink" title="1.在正方形中折出等边三角形"></a>1.在正方形中折出等边三角形</h1><p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
-<p>要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法</p>
-<p>如何让三角形最大呢</p>
-<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
-<ul>
-<li>如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上</li>
-<li>如果有顶点落在边上，可以平移该三角形，使其某一顶点落在正方形的任意顶点上</li>
-</ul>
-<p>所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形</p>
-<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191335187.png" alt="image-20200812191335187"></p>
-<p>画出图形，由几何关系，三角形的边长$l$可以用$\theta$表达</p>
-<script type="math/tex; mode=display">
-l=1 / \cos \theta=\sec \theta</script><p>故面积$A$为</p>
-<script type="math/tex; mode=display">
-A(\theta)=\frac{\sqrt{3}}{4} \sec ^{2} \theta</script><p>根据对称性，我们只需要考虑$0^{\circ} \leq \theta \leq 15^{\circ}$的情况</p>
-<p>可以暴力画图像（$\sec\theta$在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递增）</p>
-<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png" alt="untitled"></p>
-<p>或对面积求导</p>
-<script type="math/tex; mode=display">
-\frac{\mathrm{d} A}{\mathrm{d} \theta } =2\cdot \frac{\sqrt{3}}{4} \cdot \frac{1}{\cos\theta  } \cdot -\frac{1}{\cos ^{2} \theta}\cdot
--\sin \theta  =\frac{\sqrt[]{3}\sin \theta  }{2\cos^{3} \theta }</script><p>当$\theta=0^{\circ}$或$\theta=15^{\circ}$时有极值</p>
-<p>由$\ddot{A}&lt;0$或更简单的</p>
-<script type="math/tex; mode=display">
-A(0)<A(15)</script><p>故$A_{max}=\sqrt{6}-\sqrt{2}=1.035$</p>
-<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif" alt="triangle"></p>
+        <h1 id="5-抛物线折叠"><a href="#5-抛物线折叠" class="headerlink" title="5.抛物线折叠"></a>5.抛物线折叠</h1><p>取一张纸，将边线当做线$L$，在纸上取点$P$，将$P$折叠到$L$上，对应点为$P’$，压出折痕，如下图所示</p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125312126.png" alt="image-20200905125312126"></p>
+<p>观察折痕所形成的图形</p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125843676.png" alt="image-20200905125843676"></p>
+<p>看上去像是一条抛物线，但我们需要严格证明</p>
+<h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905131930.png" alt="20200905131930"></p>
+<p>以$O$为原点建立坐标系，使得$p$点坐标为$(0,1)$，$p’$点的坐标为$(t,1)$，下面求折线的方程</p>
+<p>因为折线$l$是$pp’$的中垂线</p>
+<p>$\left. { k_{pp^ { \prime }} = \frac { 2 } { t } } \ { k _ { l } = \frac { t } { 2 } } \ { y - 0 = \frac { t } { 2 } ( x - \frac { t } { 2 } ) } \ { y = \frac { t } { 2 } x - \frac { t ^ { 2 } } { 4 } } \right.$</p>
+<p>这就是折线的方程</p>
+<h2 id="求解抛物线方程"><a href="#求解抛物线方程" class="headerlink" title="求解抛物线方程"></a>求解抛物线方程</h2><h3 id="带入法："><a href="#带入法：" class="headerlink" title="带入法："></a>带入法：</h3><p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905135205746.png" alt="image-20200905135205746"></p>
+<p>考虑折线上横坐标为$t$的一点$M$</p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
+<p>将$t=x$代入折线方程</p>
+<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
+<p>这就是当$p’$在$L$上运动时，点$M$的轨迹方程</p>
+<h3 id="切线法："><a href="#切线法：" class="headerlink" title="切线法："></a>切线法：</h3><p>折线即为抛物线的切线</p>
+<p>$\frac{d y}{d x}=\frac{x}{2}$</p>
+<p>两边积分得</p>
+<p>$y=\frac{x^{2}}{4}+C$</p>
+<p>又当$p’=(0,-1)$时，函数过$O=(0,0)$，故$C=0$，即</p>
+<p>$y=\frac{x^{2}}{4}$</p>
+<h3 id="包络线法："><a href="#包络线法：" class="headerlink" title="包络线法："></a>包络线法：</h3><p>将折线方程化成有三个变量的隐式方程</p>
+<p>$\left. { 4 y = 2 t x - t ^ { 2 } } \ { t ^ { 2 } - 2 t x + 4 y = 0 } \ { F ( x , y , t ) = t ^ { 2 } - 2 t x + 4 y }  \right.$</p>
+<p>带入包络线线上方一点$(0,1)$</p>
+<p>$F ( 0,1 , t ) = t ^ { 2 } - 0 + 4 &gt; 0$</p>
+<p>故图像被分为两个区域</p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/x2.png" alt="x2"></p>
+<p>这个关系是对任意的$t$都成立</p>
+<p>考虑包络线上一点$(x_0,y_0)$，仅存在一个$t$使得$F(x_0,y_0, t)=0$，对其余$t$的题都有$F(x_0,y_0, t)&gt;0$</p>
+<p>所以$F(x_0,y_0, t)$对$t$有极值，又因为$(x_0,y_0)$必须在折线上，故</p>
+<p>$\left\{  \begin{array}{<strong>lr</strong>}    F(x, y, t)=0 \ \frac{\partial}{\partial t} F(x, y, t)=0\end{array} \right.$</p>
+<p>$\frac{\partial}{\partial t} F(x, y, t)=2 t - 2 x=0$</p>
+<p>解得</p>
+<p>$t=x$</p>
+<p>将$t=x$代入隐式方程，同样得到</p>
+<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
+<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h2><p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191017432.png" alt="image-20200905191017432"></p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191224070.png" alt="image-20200905191224070"></p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191320876.png" alt="image-20200905191320876"></p>
+<h2 id="斜抛运动包络线："><a href="#斜抛运动包络线：" class="headerlink" title="斜抛运动包络线："></a>斜抛运动包络线：</h2><p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191604321.png" alt="image-20200905191604321"></p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905192011346.png" alt="image-20200905192011346"></p>
+<p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/pic.png" alt="pic"></p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p><img src="/2020/09/20/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
+<p>重新观察这张图，$\frac{Mp}{Mp^{\prime}}=e=1$，根据抛物线的第二定义</p>
+<p>将$p$到$L$上所形成的折线便是以$p$为焦点，以$L$为准线的抛物线的一条切线，这个性质将在下一节中起到非常重要的作用。</p>
 
       
     </div>
@@ -384,8 +413,8 @@ A(0)<A(15)</script><p>故$A_{max}=\sqrt{6}-\sqrt{2}=1.035$</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/14/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" rel="next" title="微分方程">
-                <i class="fa fa-chevron-left"></i> 微分方程
+              <a href="/2020/08/28/%E5%87%B8%E5%8C%85/" rel="next" title="凸包">
+                <i class="fa fa-chevron-left"></i> 凸包
               </a>
             
           </div>
@@ -394,8 +423,8 @@ A(0)<A(15)</script><p>故$A_{max}=\sqrt{6}-\sqrt{2}=1.035$</p>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/" rel="prev" title="芳贺定理">
-                芳贺定理 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/09/20/%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B/" rel="prev" title="三次方程">
+                三次方程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,7 +554,7 @@ A(0)<A(15)</script><p>故$A_{max}=\sqrt{6}-\sqrt{2}=1.035$</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-在正方形中折出等边三角形"><span class="nav-number">1.</span> <span class="nav-text">1.在正方形中折出等边三角形</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5-抛物线折叠"><span class="nav-number">1.</span> <span class="nav-text">5.抛物线折叠</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析："><span class="nav-number">1.0.1.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解抛物线方程"><span class="nav-number">1.1.</span> <span class="nav-text">求解抛物线方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#带入法："><span class="nav-number">1.1.1.</span> <span class="nav-text">带入法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切线法："><span class="nav-number">1.1.2.</span> <span class="nav-text">切线法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包络线法："><span class="nav-number">1.1.3.</span> <span class="nav-text">包络线法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-examples"><span class="nav-number">1.2.</span> <span class="nav-text">More examples</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜抛运动包络线："><span class="nav-number">1.3.</span> <span class="nav-text">斜抛运动包络线：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">1.4.</span> <span class="nav-text">性质</span></a></li></ol></li></ol></div>
             
 
           </div>
