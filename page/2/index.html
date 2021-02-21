@@ -262,6 +262,748 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/28/%E7%A2%B0%E6%92%9E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/28/%E7%A2%B0%E6%92%9E/" itemprop="url">碰撞</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-28T12:28:42+08:00">
+                2020-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MATLAB模拟碰撞"><a href="#MATLAB模拟碰撞" class="headerlink" title="MATLAB模拟碰撞"></a>MATLAB模拟碰撞</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">m=[<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>];<span class="comment">%小球质量</span></span><br><span class="line">ball=[<span class="number">5</span> <span class="number">5</span>;<span class="number">20</span> <span class="number">10</span>;<span class="number">11</span> <span class="number">15</span>];<span class="comment">%球的坐标</span></span><br><span class="line">r=[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];<span class="comment">%半径</span></span><br><span class="line">color=[<span class="string">'b'</span>,<span class="string">'y'</span>,<span class="string">'r'</span>];<span class="comment">%球的颜色</span></span><br><span class="line">v= <span class="built_in">rand</span>(<span class="number">3</span>,<span class="number">2</span>)*<span class="number">0.8</span>;<span class="comment">%随机生成速度</span></span><br><span class="line"><span class="built_in">disp</span>(v)</span><br><span class="line">dt=<span class="number">0.55</span>;</span><br><span class="line"><span class="built_in">figure</span></span><br><span class="line">xlim([<span class="number">-5</span> <span class="number">45</span>])</span><br><span class="line">ylim([<span class="number">-5</span> <span class="number">35</span>])</span><br><span class="line"><span class="keyword">while</span> <span class="built_in">true</span><span class="comment">%逐帧绘制</span></span><br><span class="line">    yes=[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>];<span class="comment">%未处理,防止重复计算</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">3</span></span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="number">3</span></span><br><span class="line">            <span class="keyword">if</span> yes(<span class="built_in">i</span>)</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">i</span>==<span class="built_in">j</span></span><br><span class="line">                    <span class="keyword">if</span> ball(<span class="built_in">j</span>,<span class="number">1</span>)&lt;r(<span class="built_in">j</span>) || ball(<span class="built_in">j</span>,<span class="number">1</span>)&gt;=<span class="number">40</span>-r(<span class="built_in">j</span>)<span class="comment">%x边界</span></span><br><span class="line">                        v(<span class="built_in">j</span>,<span class="number">1</span>)=-v(<span class="built_in">j</span>,<span class="number">1</span>);</span><br><span class="line">                    <span class="keyword">end</span></span><br><span class="line">                    <span class="keyword">if</span> ball(<span class="built_in">j</span>,<span class="number">2</span>)&lt;r(<span class="built_in">j</span>) || ball(<span class="built_in">j</span>,<span class="number">2</span>)&gt;=<span class="number">30</span>-r(<span class="built_in">j</span>)<span class="comment">%y边界</span></span><br><span class="line">                        v(<span class="built_in">j</span>,<span class="number">2</span>)=-v(<span class="built_in">j</span>,<span class="number">2</span>);</span><br><span class="line">                    <span class="keyword">end</span></span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    distance=<span class="built_in">sqrt</span>((ball(<span class="built_in">i</span>,<span class="number">1</span>)-ball(<span class="built_in">j</span>,<span class="number">1</span>)).^<span class="number">2</span>+(ball(<span class="built_in">i</span>,<span class="number">2</span>)-ball(<span class="built_in">j</span>,<span class="number">2</span>)).^<span class="number">2</span>);</span><br><span class="line">                    <span class="keyword">if</span> distance&lt;=(r(<span class="built_in">i</span>)+r(<span class="built_in">j</span>))<span class="comment">%速度计算</span></span><br><span class="line">                        vix=((m(<span class="built_in">i</span>)-m(<span class="built_in">j</span>))*v(<span class="built_in">i</span>,<span class="number">1</span>)+<span class="number">2</span>*m(<span class="built_in">j</span>)*v(<span class="built_in">j</span>,<span class="number">1</span>))/(m(<span class="built_in">i</span>)+m(<span class="built_in">j</span>));</span><br><span class="line">                        viy=((m(<span class="built_in">i</span>)-m(<span class="built_in">j</span>))*v(<span class="built_in">i</span>,<span class="number">2</span>)+<span class="number">2</span>*m(<span class="built_in">j</span>)*v(<span class="built_in">j</span>,<span class="number">2</span>))/(m(<span class="built_in">i</span>)+m(<span class="built_in">j</span>));</span><br><span class="line">                        vjx=((m(<span class="built_in">j</span>)-m(<span class="built_in">i</span>))*v(<span class="built_in">j</span>,<span class="number">1</span>)+<span class="number">2</span>*m(<span class="built_in">i</span>)*v(<span class="built_in">i</span>,<span class="number">1</span>))/(m(<span class="built_in">i</span>)+m(<span class="built_in">j</span>));</span><br><span class="line">                        vjy=((m(<span class="built_in">j</span>)-m(<span class="built_in">i</span>))*v(<span class="built_in">j</span>,<span class="number">2</span>)+<span class="number">2</span>*m(<span class="built_in">i</span>)*v(<span class="built_in">i</span>,<span class="number">2</span>))/(m(<span class="built_in">i</span>)+m(<span class="built_in">j</span>));</span><br><span class="line">                        v(<span class="built_in">i</span>,<span class="number">1</span>)=vix;</span><br><span class="line">                        v(<span class="built_in">i</span>,<span class="number">2</span>)=viy;</span><br><span class="line">                        v(<span class="built_in">j</span>,<span class="number">1</span>)=vjx;</span><br><span class="line">                        v(<span class="built_in">j</span>,<span class="number">2</span>)=vjy;</span><br><span class="line">                        yes(<span class="built_in">j</span>)=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">end</span>    </span><br><span class="line">                <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span> </span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    rectangle(<span class="string">'Position'</span>,[<span class="number">0</span>,<span class="number">0</span>,<span class="number">40</span>,<span class="number">30</span>])</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">3</span></span><br><span class="line">        ball(<span class="built_in">i</span>,:)=ball(<span class="built_in">i</span>,:)+v(<span class="built_in">i</span>,:)*dt;<span class="comment">%近似匀速</span></span><br><span class="line">        rectangle(<span class="string">'Position'</span>,[ball(<span class="built_in">i</span>,<span class="number">1</span>)-r(<span class="built_in">i</span>),ball(<span class="built_in">i</span>,<span class="number">2</span>)-r(<span class="built_in">i</span>),<span class="number">2</span>*r(<span class="built_in">i</span>),<span class="number">2</span>*r(<span class="built_in">i</span>)],<span class="string">'Curvature'</span>,[<span class="number">1</span>,<span class="number">1</span>],  <span class="string">'FaceColor'</span>,color(<span class="built_in">i</span>))</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    drawnow</span><br><span class="line">    cla<span class="comment">%清空</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/14/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/" itemprop="url">川崎定理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-14T13:53:45+08:00">
+                2020-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="川崎定理-The-Kawasaki-Justin-Theorem"><a href="#川崎定理-The-Kawasaki-Justin-Theorem" class="headerlink" title="川崎定理(The Kawasaki-Justin Theorem)"></a>川崎定理(The Kawasaki-Justin Theorem)</h2><p><img src="/2020/08/14/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/image-20200814203438697.png" alt="image-20200814203438697"></p>
+<p>$a=90^{\circ}, b=45^{\circ}, c=90^{\circ}, d=135^{\circ}$</p>
+<p>$a-b+c-d=90^{\circ}-45^{\circ}+90^{\circ}-135^{\circ}=0^{\circ}$</p>
+<p><img src="/2020/08/14/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/image-20200814203615560.png" alt="image-20200814203615560"></p>
+<p>还是假设一只蚂蚁在纸上爬行</p>
+<p><img src="/2020/08/14/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/image-20200815121513944.png" alt="image-20200815121513944"></p>
+<p>定义$\alpha_{2n-1}&gt;0$，$\alpha_{2n}&lt;0$</p>
+<p>爬行一周过后，蚂蚁回到了原点，位移为0，即图中</p>
+<p>$\alpha_{1}-\alpha_{2}+\alpha_{3}-\alpha_{4}=0$</p>
+<p>由偶数定理，推广这个结论</p>
+<p>$\alpha_{1}-\alpha_{2}+\alpha_{3}-\cdots-\alpha_{2 n}=0$</p>
+<p>更简洁的表述为</p>
+<p>$\sum(-1)^{i} \alpha_{i}=0$</p>
+<p>$\because  \sum \alpha_{i}=360^{\circ}$</p>
+<p>$\therefore \alpha_{1}+\alpha_{3}+\cdots+\alpha_{2 n-1}=\alpha_{2}+\alpha_{4}+\cdots+\alpha_{2 n}=180^{\circ}$</p>
+<h3 id="局部最小定理-Local-Min-："><a href="#局部最小定理-Local-Min-：" class="headerlink" title="局部最小定理(Local Min)："></a>局部最小定理(Local Min)：</h3><p><img src="/2020/08/14/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/image-20200815133043061.png" alt="image-20200815133043061"></p>
+<p>考虑角$\theta_{i}$和与之相邻的两个角$\theta_{i-1}$和$\theta_{i+1}$，如果有</p>
+<p>$\theta_{i-1}&gt;\theta_{i}&lt;\theta_{i+1}$</p>
+<p>则称$\theta_{i}$为局部最小角，这个局部最小角对应的两条折痕必然是一山一谷(下图)</p>
+<p>$proof:$</p>
+<p>如果两条边都是山折(谷折)，那么将会穿破纸层(上图)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/" itemprop="url">前川定理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-14T12:47:21+08:00">
+                2020-08-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前川定理-The-Maekawa-Justin-Theorem"><a href="#前川定理-The-Maekawa-Justin-Theorem" class="headerlink" title="前川定理(The Maekawa-Justin Theorem)"></a>前川定理(The Maekawa-Justin Theorem)</h2><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/artist_jun_maekawa.jpg" alt="artist_jun_maekawa"></p>
+<p>MAEKAWA Jun (前川淳)，日本的软件工程师，数学家，折纸艺术家。</p>
+<p>平顶点折叠的例子</p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130413151.png" alt="image-20200814130413151"></p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130404199.png" alt="image-20200814130404199"></p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130423490.png" alt="image-20200814130423490"></p>
+<p>让$M$和$V$分别代表平顶点折叠中山折和谷折的数量，则前川定理可以表示为</p>
+<p>$M = V +2 \quad or\quad V = M + 2$</p>
+<p>$proof1:$</p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814124909047.png" alt="image-20200814124909047"></p>
+<p>由于我们只关心顶点$x$和周围的折痕，所以可以以$x$为圆心做一个圆$(a)$，按折痕折叠后形成$(b)$</p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814125047016.png" alt="image-20200814125047016"></p>
+<p>从下往上看向顶点x，可以发现圆环形成了一个闭合回路$(c)$</p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814125056916.png" alt="image-20200814125056916"></p>
+<p>想象有一个蚂蚁从$p$点出发在这个闭合回路上爬行，遇到山折便逆时针旋转$180^{\circ}$，遇到谷折便顺时针旋转$180^{\circ}$，最后回到原点，方向和开始一样，由于沿着闭合回路走了一周，相当于旋转了$360^{\circ}$度，即</p>
+<p>$M · 180^{\circ} +V ·(−180^{\circ}) = 360^{\circ}$</p>
+<p>$M − V = 2$</p>
+<p>因为纸有两面，如果从另一面看，原来的山折变成了谷折，原来的谷折变成了山折，所以有</p>
+<p>$V − M = 2$</p>
+<p>这样便证明了前川定理</p>
+<p>$proof2:$</p>
+<p>这个证明是由Jan Siwanowicz在他还是个高中生的时候提出的</p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130533821.png" alt="image-20200814130533821"></p>
+<p>将此前的闭合回路看作一个多边形，把山折看成内角等于$0$，谷折看成内角等于$360^{\circ}$</p>
+<p>由多边形内角和定理</p>
+<p>$Sum=（n － 2）×180^{\circ}$</p>
+<p>推得在这个多边形中，内角和为</p>
+<p>$M · 0^{\circ} +V · 360^{\circ}$</p>
+<p>$V · 360^{\circ} = (M +V-2)180^{\circ}$</p>
+<p>$\therefore M = V +2 \quad or\quad V = M + 2$</p>
+<p><img src="/2020/08/14/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814191350681.png" alt="image-20200814191350681"></p>
+<h3 id="推广："><a href="#推广：" class="headerlink" title="推广："></a>推广：</h3><p>$M + V = 2V + 2 \quad or \quad2V − 2$</p>
+<p>得到偶数定理：单顶点折叠中折痕总数必为偶数，角的总数也必为偶数</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/" itemprop="url">芳贺定理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-13T12:40:49+08:00">
+                2020-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-芳贺第一定理"><a href="#1-芳贺第一定理" class="headerlink" title="1.芳贺第一定理"></a>1.芳贺第一定理</h2><p>日本筑波大学生物学教授芳贺和夫（Kazuo Haga），在等待实 验结果的时候喜欢用摺纸打发时间。他发现了以下的有趣结果。</p>
+<p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124235857.png" alt></p>
+<p>$Claim:F$为$AB$的三等分点</p>
+<p>$proof:$</p>
+<p>设正方形边长为1，将$C$折到$AD$的中点$E$处，由图</p>
+<script type="math/tex; mode=display">
+x^{2}+\left(\frac{1}{2}\right)^{2}=(1-x)^{2}</script><p>解得$x=\frac{3}{8}$</p>
+<p>又$\triangle FAR \sim \triangle EDH$</p>
+<script type="math/tex; mode=display">
+\frac{y}{\frac{1}{2}}=\frac{\frac{1}{2}}{x}</script><p>解得$y=\frac{2}{3}$</p>
+<p>$Property:$</p>
+<h3 id="推广："><a href="#推广：" class="headerlink" title="推广："></a>推广：</h3><p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813134225211.png" alt="image-20200813134225211"></p>
+<script type="math/tex; mode=display">
+x^{2}+k^{2}=(1-x)^{2}</script><script type="math/tex; mode=display">
+\frac{y}{1-k}=\frac{k}{x}</script><p>通过相似三角形和勾股定理，联立两个方程</p>
+<script type="math/tex; mode=display">
+\frac{y}{1-k}=\frac{k}{\left(1-k^{2}\right) / 2}</script><script type="math/tex; mode=display">
+\frac{y}{2}=\frac{k}{1+k}</script><p>若正方形边长为1，有$k=\frac{1}{N}$，带入得到</p>
+<script type="math/tex; mode=display">
+\frac{y}{2}=\frac{1 / N}{1+1 / N}=\frac{1}{N+1}</script><p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813135158277.png" alt="image-20200813135158277"></p>
+<p>如果一直按此方法重复，就可以由$n$等分得到$n+1$等分，于是便得到了任意等分 <del>有点麻烦</del></p>
+<p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813195253772.png" alt="image-20200813195253772">注意左上角的直角三角形，它是一个$3:4:5$的直角三角形，难道这只是巧合吗</p>
+<p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813201010031.png" alt="image-20200813201010031"></p>
+<p>$A B=1, A N=x  $及$A M=\frac{p}{q}  $其 中 $p, q \in \mathbb{N},  M N=1-x $</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left(\frac{p}{q}\right)^{2}+x^{2} &=(1-x)^{2} \\
+\frac{p^{2}}{q^{2}}+x^{2} &=1-2 x+x^{2} \\
+x &=\frac{q^{2}-p^{2}}{2 q^{2}}
+\end{aligned}</script><p>所以，</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+A N: A M: M N &=\frac{q^{2}-p^{2}}{2 q^{2}}: \frac{p}{q}: 1-\frac{q^{2}-p^{2}}{2 q^{2}} \\
+&=q^{2}-p^{2}: 2 p q: p^{2}+q^{2}
+\end{aligned}</script><p>所以只要$p$和$q$是整数，那么这三条边的比就一定是勾股数</p>
+<script type="math/tex; mode=display">
+\begin{array}{|l|l|}
+\hline p / q & A N: A M: M N \\
+\hline 1 / 2 & 3: 4: 5 \\
+\hline 2 / 3 & 5: 12: 13 \\
+\hline 1 / 4 & 15: 8: 17 \\
+\hline
+\end{array}</script><h2 id="2-芳贺第二定理"><a href="#2-芳贺第二定理" class="headerlink" title="2.芳贺第二定理"></a>2.芳贺第二定理</h2><p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124422672.png" alt="image-20200813124422672"></p>
+<p>将$AB$沿$CF$折叠，延长$FG$交$AD$于$E$</p>
+<p>在$\triangle AEF$中，有</p>
+<script type="math/tex; mode=display">
+(1-x)^{2}+(\frac{1}{2})^{2}=(x+\frac{1}{2})^2</script><p>解得$x=\frac{1}{3}$，即$E$是$AD$的三等分点</p>
+<h2 id="3-芳贺第三定理"><a href="#3-芳贺第三定理" class="headerlink" title="3.芳贺第三定理"></a>3.芳贺第三定理</h2><p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124308393.png" alt="image-20200813124308393"></p>
+<p>设正方形 $ABCD$的边长为1,$ C M$=$x$, $C G$=$y$</p>
+<p>将$AB$边折到$AD$中点$E$上，并让$B$点落在$CD$上</p>
+<p>由  $\triangle E D M \sim \triangle C M G$,  可得</p>
+<script type="math/tex; mode=display">
+\frac{D E}{D M}=\frac{C M}{C G}</script><p>在$\triangle  C M G$  中, $G M<script type="math/tex">=</script>1-CG=1-y$，有</p>
+<script type="math/tex; mode=display">
+x^{2}+y^{2}=(1-y)^{2}</script><p>解之得</p>
+<script type="math/tex; mode=display">
+y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $的三等分点.</p>
+<h2 id="4-再谈n等分"><a href="#4-再谈n等分" class="headerlink" title="4.再谈n等分"></a>4.再谈n等分</h2><p><img src="/2020/08/13/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813191319434.png" alt="image-20200813191319434"></p>
+<p> 如果我们得到了$n-1$等分，在图中不难看出</p>
+<script type="math/tex; mode=display">
+\frac{\frac{1}{n-1}}{1}=\frac{x}{y}</script><p>消去$y$可以得到$x=\frac{1}{n}$</p>
+<p>这样我们又有一种n等分的方式</p>
+<p>$tip:$如果要得到7等分，我们可以先折3等分再对折，从而由6等分得到7等分</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h3><ol>
+<li><a href="https://plus.maths.org/content/folding-numbers" target="_blank" rel="noopener">https://plus.maths.org/content/folding-numbers</a></li>
+<li><a href="https://www.bilibili.com/read/cv5270753/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5270753/</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/" itemprop="url">等边三角形</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-12T12:33:19+08:00">
+                2020-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-在正方形中折出等边三角形"><a href="#1-在正方形中折出等边三角形" class="headerlink" title="1.在正方形中折出等边三角形"></a>1.在正方形中折出等边三角形</h1><p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
+<p>要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法</p>
+<p>如何让三角形最大呢</p>
+<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
+<ul>
+<li>如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上</li>
+<li>如果有顶点落在边上，可以平移该三角形，使其某一顶点落在正方形的任意顶点上</li>
+</ul>
+<p>所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形</p>
+<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191335187.png" alt="image-20200812191335187"></p>
+<p>画出图形，由几何关系，三角形的边长$l$可以用$\theta$表达</p>
+<script type="math/tex; mode=display">
+l=1 / \cos \theta=\sec \theta</script><p>故面积$A$为</p>
+<script type="math/tex; mode=display">
+A(\theta)=\frac{\sqrt{3}}{4} \sec ^{2} \theta</script><p>根据对称性，我们只需要考虑$0^{\circ} \leq \theta \leq 15^{\circ}$的情况</p>
+<p>可以暴力画图像（$\sec\theta$在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递增）</p>
+<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png" alt="untitled"></p>
+<p>或对面积求导</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d} A}{\mathrm{d} \theta } =2\cdot \frac{\sqrt{3}}{4} \cdot \frac{1}{\cos\theta  } \cdot -\frac{1}{\cos ^{2} \theta}\cdot
+-\sin \theta  =\frac{\sqrt[]{3}\sin \theta  }{2\cos^{3} \theta }</script><p>当$\theta=0^{\circ}$或$\theta=15^{\circ}$时有极值</p>
+<p>由$\ddot{A}&lt;0$或更简单的</p>
+<script type="math/tex; mode=display">
+A(0)<A(15)</script><p>故$A_{max}=\sqrt{6}-\sqrt{2}=1.035$</p>
+<p><img src="/2020/08/12/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif" alt="triangle"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -503,7 +1245,7 @@ x=A \mathrm{e}^{-n t} \sin (\omega t+\varphi)</script><p>物体的运动是周�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -561,8 +1303,8 @@ x=A \mathrm{e}^{-n t} \sin (\omega t+\varphi)</script><p>物体的运动是周�
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
