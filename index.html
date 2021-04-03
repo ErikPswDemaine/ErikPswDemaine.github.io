@@ -220,12 +220,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Tags
+            Mine
           </a>
         </li>
       
@@ -248,6 +248,333 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/03/%E6%95%B0%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/03/%E6%95%B0%E5%AD%A6/" itemprop="url">数学</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-03T19:58:38+08:00">
+                2021-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[toc]</p>
+<h1 id="立体几何"><a href="#立体几何" class="headerlink" title="立体几何"></a>立体几何</h1><h2 id="公理与定理"><a href="#公理与定理" class="headerlink" title="公理与定理"></a>公理与定理</h2><script type="math/tex; mode=display">
+A\in l,B\in l, C\notin l \Longrightarrow \exists \alpha \quad s.t.\quad A,B,C\in\alpha</script><h2 id="面积体积公式"><a href="#面积体积公式" class="headerlink" title="面积体积公式"></a>面积体积公式</h2><script type="math/tex; mode=display">
+圆锥\begin{cases} S_{侧}=\pi rl \\S_{底}=\pi r^2\\V=\frac13Sh\end{cases}</script><script type="math/tex; mode=display">
+圆台\begin{cases} S_{侧}=\pi (r+r'
+)l \\V=\frac13(\sqrt S+\sqrt {SS'}+\sqrt {S'})h\end{cases}</script><script type="math/tex; mode=display">
+正四面体\begin{cases} h=\frac{\sqrt 6}{3}a \\  r_{外}=\frac{\sqrt 6}{4}a \\r_{内}=\frac{\sqrt 6}{12}a\end{cases}</script><script type="math/tex; mode=display">
+圆台\begin{cases} S=4\pi R^2 \\V=\frac43\pi R^3\end{cases}</script><h1 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>从十个球中取出三个球，放回，求第二次取出球中至少有一个球与第一次取出的三个球中的一个相同的概率</p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><h3 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h3><script type="math/tex; mode=display">
+P(至少一个一样)=1-P(都不一样)=1-\frac{\mathrm{C}^3_7}{\mathrm{C}_{10}^3}=1-\frac{35}{120}=\frac{17}{24}=70.8\%</script><h3 id="反算法"><a href="#反算法" class="headerlink" title="反算法"></a>反算法</h3><p>三个全不一样</p>
+<script type="math/tex; mode=display">
+P(至少一个一样)=1-P(都不一样)=1-\frac{7}{10}\times\frac{6}{9}\times\frac{5}{8}=\frac{17}{24}=70.8\%</script><h3 id="直接法"><a href="#直接法" class="headerlink" title="直接法"></a>直接法</h3><p>只有一个一样，其余两个不一样</p>
+<script type="math/tex; mode=display">
+P_1=\frac{3}{10}\times\frac{7}{9}\times\frac{6}{8}\times3=\frac{21}{40}</script><p>只有两个一样，其余一个不一样</p>
+<script type="math/tex; mode=display">
+P_2=\frac{3}{10}\times\frac{2}{9}\times\frac{7}{8}\times3=\frac{7}{40}</script><p>三个一样</p>
+<script type="math/tex; mode=display">
+P_3=\frac{3}{10}\times\frac{2}{9}\times\frac{1}{8}=\frac{1}{120}</script><script type="math/tex; mode=display">
+P=P_1+P_2+P_3=\frac{17}{24}=70.8\%</script><h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><h2 id="分离参数"><a href="#分离参数" class="headerlink" title="分离参数"></a>分离参数</h2><p>1.函数$f(x)=\frac12ax^2-2ax+\ln x$在$(1,3)$上不单调，求$a$的范围</p>
+<p>$<1>$</1></p>
+<p>$f’(x)=ax-2a+\frac1x$，不单调，故$f’(x)=0$在$x\in(1,3)$上有解</p>
+<p>分离参数$a=\frac{1}{-x^2+2x}$</p>
+<p>因为$-x^2+2x\in(-3,1)$，故$a\in(-\infty,-\frac13)\cup (1,+\infty)$</p>
+<p>$<2>$</2></p>
+<p>$f’(x)=\frac{ax^2-2ax+1}{x}$，若不为二次函数，即$a=0$时，显然不成立</p>
+<p>记$g(x)=ax^2-2ax+1$，其对称轴为$x=1$</p>
+<p>因为$g(x)$在$(1,3)$上单调，要有零点，由零点定理$g(1)\cdot g(3)&lt;0$</p>
+<p>解得$a\in(-\infty,-\frac13)\cup (1,+\infty)$</p>
+<h2 id="零点问题"><a href="#零点问题" class="headerlink" title="零点问题"></a>零点问题</h2><p>$f(x)=(x-2)e^x+a(x-1)^2$有两个零点，求$a$的范围</p>
+<p>$f’(x)=(x-1)(e^x+2a)\rightarrow x_1=1,x_2=\ln(-2a)$，注意到$\ln x$中$x&gt;0$</p>
+<ol>
+<li><p>$a=0$，$f(x)=(x-2)e^x$，有一个零点</p>
+</li>
+<li><p>$a&gt;0$，于$x=1$有极小，$f(1)=-e&lt;0$</p>
+<p>由于函数可能有渐近线，故取$f(2)=a&gt;0$，$x\rightarrow-\infty,(x-2)e^x\rightarrow 0,a(x-1)^2\rightarrow+\infty$故有两个零点</p>
+</li>
+<li><p>当$a&lt;0$时，$\ln(-2a)=1,a=-\frac e2$在$R$上单调增，不成立</p>
+</li>
+<li><p>$\ln(-2a)\le 1,a\ge-\frac e2$，于$(-\infty,\ln(-2a))$和$(1,+\infty)\uparrow$，$(\ln(-2a),1)\downarrow$</p>
+<p>于$x=\ln(-2a)$，有极大值，于$x=1$，有极小值，当$x&lt;1$时$f(x)&lt;0$恒成立，故不成立</p>
+</li>
+<li><p>同理得$\ln(-2a)&gt; 1$，不成立</p>
+</li>
+</ol>
+<p>综上，$a\in(0,+\infty)$</p>
+<h2 id="极值点偏移"><a href="#极值点偏移" class="headerlink" title="极值点偏移"></a>极值点偏移</h2><p>同上题$x_1,x_2$是$f(x)$的两个零点，证明$x_1+x_2&lt;2$</p>
+<p>由第一问的结论，不妨设$x_1&lt;1&lt;x_2$</p>
+<p>$x_1+x_2&lt;2\Longleftrightarrow x_1&lt;2-x_2$</p>
+<p>$x_2&gt;1\Longleftrightarrow -x_2&lt;-1\Longleftrightarrow 2-x_2&lt;1$</p>
+<p>证明$x_1+x_2&lt;2$，因为$2-x_2\in(x_1,1)\rightarrow f(2-x_2)&lt;0$</p>
+<p>记$ f(2-x_2)$为$g(x)$，其中$x&gt;1$</p>
+<p>$\begin{cases} g(x)=-xe^{2-x}+a(x-1)^2\\f(x_2)=0\rightarrow(x-2)e^x+a(x-1)^2=0 \end{cases}$</p>
+<p>$g(x)=-xe^{2-x}-(x-2)e^x$</p>
+<p>$g’(x)=(x-1)e^{2-x}-(x-1)e^x=(x-1)(e^{2-x}-e^x)$</p>
+<p>$g(x)$于$(1,+\infty)\downarrow$，$g(1)=0$，故$f(2-x_2)&lt;0$成立</p>
+<p>函数$f(x)$于$x=x_0$处有极小值，但当$x&gt;x_0$时，函数增长更快，于是有$x_m=\frac{x_1+x_2}{2}&lt;x_0\rightarrow x_1+x_2&lt;2x_0$，这就是极值点偏移，下面我们来看一道例题</p>
+<p>$f(x)=(x-2)e^x+a(x-1)^2$有两个零点</p>
+<p>$f’(x)=(x-1)(e^x+2a)\rightarrow x_1=1,x_2=\ln(-2a)$</p>
+<p>由第一问得$a\in(0,+\infty)$</p>
+<p>不妨设$x_1&lt;1&lt;x_2$</p>
+<p>$x_1+x_2&lt;2\Longleftrightarrow x_1&lt;2-x_2$</p>
+<p>$x_2&gt;1\Longleftrightarrow -x_2&lt;-1\Longleftrightarrow 2-x_2&lt;1$</p>
+<p>证明$x_1+x_2&lt;2$，因为$2-x_2\in(x_1,1)\rightarrow f(2-x_2)&lt;0$</p>
+<p>记$ f(2-x_2)$为$g(x)$，其中$x&gt;1$</p>
+<p>$\begin{cases} g(x)=-xe^{2-x}+a(x-1)^2\\f(x_2)=0\rightarrow(x-2)e^x+a(x-1)^2=0 \end{cases}$</p>
+<p>$g(x)=-xe^{2-x}-(x-2)e^x$</p>
+<p>$g’(x)=(x-1)e^{2-x}-(x-1)e^x=(x-1)(e^{2-x}-e^x)$</p>
+<p>$g(x)$于$(1,+\infty)\downarrow$，$g(1)=0$，故$f(2-x_2)&lt;0$成立</p>
+<p>$f(x)=2\ln x+x^2-1$</p>
+<p>$f’(x)=\frac 2x+2x$</p>
+<p>由于$\frac 2x+2x$在$x=1$两侧变化速度不同，于是$f(x)$出现关于点$(1,0)$的拐点偏移，可以证明，当$f(x_1)+f(x_2)=0$时，有$x_1+x_2&gt;2$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/" itemprop="url">三等分角</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-03T19:58:38+08:00">
+                2021-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="用折纸三等分任意锐角和倍立方"><a href="#用折纸三等分任意锐角和倍立方" class="headerlink" title="用折纸三等分任意锐角和倍立方"></a>用折纸三等分任意锐角和倍立方</h1><h2 id="三等分任意锐角"><a href="#三等分任意锐角" class="headerlink" title="三等分任意锐角"></a>三等分任意锐角</h2><p>三等分角是古希腊平面几何里尺规作图领域中的著名问题，与化圆为方及倍立方问题并列为尺规作图三大难题。尺规作图是古希腊人的数学研究课题之一，是对具体的直尺和圆规画图可能性的抽象化，研究是否能用规定的作图法在有限步内达到给定的目标。三等分角问题的内容是：==能否仅用尺规作图法将任意角度三等分？==</p>
+<h3 id="折纸解法"><a href="#折纸解法" class="headerlink" title="折纸解法"></a>折纸解法</h3><p><img src="/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/image-20201205191153494.png" alt="image-20201205191153494"></p>
+<p>在正方形中，有一个锐角$\theta$，我们要将其三等分。首先在正方形下部任意对折，得到折痕$L_1$，此时应用折纸公理6(双点到线)，将$p_1$折到$L_1$上，同时将$p_2$折到角的另一边$L_2$上，此时$L_1$的延长线$L_3$即把$\theta$三等分</p>
+<h1 id="折叠即对称"><a href="#折叠即对称" class="headerlink" title="折叠即对称"></a><strong><u>折叠即对称</u></strong></h1><p>首先说明为什么$p_1$在$L_3$上</p>
+<p><img src="/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/image-20201205192109865.png" alt="image-20201205192109865"></p>
+<p>由折叠的对称性，原来的$p_1$成为了$C$，可知$xC=xp_1$，所以对顶角相等，即可推出$p_1$在$L_3$上</p>
+<p><img src="/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/image-20201205193345795.png" alt="image-20201205193345795"></p>
+<p>由图$AB=BC=CD$，由角平分线定理和$p_1B\perp AC$得$\triangle p_1AB\cong \triangle p_1BC\cong \triangle p_1CD$所以有三等分</p>
+<h2 id="倍立方"><a href="#倍立方" class="headerlink" title="倍立方"></a>倍立方</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>==能否用尺规作图的方法作出一立方体的棱长，使该立方体的体积等于一给定立方体的两倍？==</p>
+<h3 id="相关传说"><a href="#相关传说" class="headerlink" title="相关传说"></a>相关传说</h3><p>传说中，这问题的来源，可追溯到公元前429年。一场瘟疫袭击了希腊提洛岛（Delos），造成四分之一的人口死亡。岛民们去神庙请示阿波罗的旨意，神谕说：要想遏止瘟疫，得将阿波罗神殿中那正立方的祭坛加大一倍。人们便把每边增长一倍，结果体积当然就变成了8倍，瘟疫依旧蔓延；接着人们又试著把体积改成原来的2倍，但形状却变为一个长方体……第罗斯岛人在万般无奈的情况下，只好鼓足勇气到雅典去求救于当时著名的学者柏拉图。<br>开始，柏拉图和他的学生认为这个问题很容易。他们根据平时的经验，觉得利用尺规作图可以轻而易举地作一个正方形，使它的面积等于已知正方形的2倍，那么作一个正方体，使它的体积等于已知正方体体积的2倍，还会难吗?</p>
+<h3 id="折纸解法-1"><a href="#折纸解法-1" class="headerlink" title="折纸解法"></a>折纸解法</h3><p>首先将正方形三等分</p>
+<p><img src="/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/image-20201205194241262.png" alt="image-20201205194241262"></p>
+<p>将$p_1$折到$L_1$上，同时将$p_2$折到$L_2$上，则$p_1$折叠后的点将$L_1$分成两段，其长度之比$\frac X Y$即为$\sqrt[3]{2} $</p>
+<p><img src="/2021/04/03/%E4%B8%89%E7%AD%89%E5%88%86%E8%A7%92/image-20201205194659297.png" alt="image-20201205194659297"></p>
+<p>为了简化计算，我们令$Y=1$，则正方形的边长即为$X+1$，由$\triangle ABC\sim\triangle EDA$有</p>
+<p>$\frac { d } { X + 1 - d } = \frac { 2 X - 1 } { X + 1 } \Rightarrow \frac { X ^ { 2 } + 2 X } { X ^ { 2 } + 2 X + 2 } = \frac { 2 X - 1 } { X + 1 }$</p>
+<p>$\Rightarrow X ^ { 3 } + 3 X ^ { 2 } + 2 X = 2 X ^ { 3 } + 3 X ^ { 2 } + 2 X - 2 \Rightarrow X ^ { 3 } = 2$</p>
+<p>所以$X=\sqrt[3]{2} $</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -349,7 +676,7 @@ P(A)=(k/N)^n
 p(B|A)=1-\sum_{i=1}^{k-1}\binom{k}{i}(1-i/k)^n(-1)^{i+1}
 P\{D=k\}=\binom{N}{k}P(AB)</script><script type="math/tex; mode=display">
 \left\{ \begin{array}{l}  U = \frac { Q } { C } = \frac { n q } { C }  \\ { a = g - \frac { E q } { m } = g - \frac { U q } { d m } = g - \frac { n q ^ { 2 } } { d m C } } \\ { \frac { d } { 2 } = \frac { 1 } { 2 } a t ^ { 2 } = \frac { 1 } { 2 } ( g - \frac { n q ^ { 2 } } { d m C } ) \cdot ( \frac { L } { v _ { 0 } } ) ^ { 2 } } \end{array} \right .\Rightarrow n = ( g - \frac { d v _ { 0 } ^ { 2 } } { L ^ { 2 } } ) \cdot \frac { d m C } { q ^ { 2 } }</script><script type="math/tex; mode=display">
-\sum^{i} IR_i=0</script><script type="math/tex; mode=display">
+\oint IR=0</script><script type="math/tex; mode=display">
 \left \{\begin{array}{l}x=x_0+t\cos\theta,\\y=y_0+t\sin\theta \end{array}\right .(\theta\in [0,\pi])</script><script type="math/tex; mode=display">
 \rho =\frac{ep}{1-e\cos\theta}</script><script type="math/tex; mode=display">
 \frac {x^2} {a^2}\pm \frac {y^2} {b^2}=1</script><script type="math/tex; mode=display">
@@ -377,7 +704,9 @@ x=d_md_{m-1}…d_1d_0.d_{-1}…d_{-(n-1)}d_{-n}\\
 x=\sum_{i=-n}^{m}d_i\cdot10^i</script><script type="math/tex; mode=display">
 float=>V=(-1)^s\times M\times2^E\\
 E=e-bias(bias=2^{8-1}-1=127)
-\\e\in[1,255]\\E\in[-126,127]\\M=1+f=1.f_{22}f_{21…}f_1</script>
+\\e\in[1,255]\\E\in[-126,127]\\M=1+f=1.f_{22}f_{21…}f_1</script><script type="math/tex; mode=display">
+\bar{F} =\frac{m_0}{l_1}\sum_{i=1}^{N}v_{ix}^2</script><script type="math/tex; mode=display">
+p=n_0kTe^{-\frac{m_0gh}{kT}}</script>
           
         
       
@@ -505,164 +834,16 @@ E=\frac{\triangle \varphi }{\triangle t}=\frac{\triangle B }{\triangle t}S+B'lv<
 \\\left \{ \begin{array}{l}I=\frac{\triangle q}{\triangle t}\\ \triangle q=C\triangle U\\\triangle U=Bl\triangle v\\ a=\frac{\triangle v}{\triangle t} \end{array}\right.\Rightarrow I=BlCa\\
 ma=F-BIl=F-B^2L^2Ca\Rightarrow a=\frac{F}{m-B^2L^2C}\triangle</script><script type="math/tex; mode=display">
 无外力电容\\E=\frac QC=BLv\Rightarrow v=\frac{Q}{BLC}
-\\BIL\triangle t=mv-mv_0=BLQ</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/21/%E5%AF%BC%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/02/21/%E5%AF%BC%E6%95%B0/" itemprop="url">导数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-21T17:55:45+08:00">
-                2021-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[toc]</p>
-<h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><h2 id="分离参数"><a href="#分离参数" class="headerlink" title="分离参数"></a>分离参数</h2><p>1.函数$f(x)=\frac12ax^2-2ax+\ln x$在$(1,3)$上不单调，求$a$的范围</p>
-<p>$<1>$</1></p>
-<p>$f’(x)=ax-2a+\frac1x$，不单调，故$f’(x)=0$在$x\in(1,3)$上有解</p>
-<p>分离参数$a=\frac{1}{-x^2+2x}$</p>
-<p>因为$-x^2+2x\in(-3,1)$，故$a\in(-\infty,-\frac13)\cup (1,+\infty)$</p>
-<p>$<2>$</2></p>
-<p>$f’(x)=\frac{ax^2-2ax+1}{x}$，若不为二次函数，即$a=0$时，显然不成立</p>
-<p>记$g(x)=ax^2-2ax+1$，其对称轴为$x=1$</p>
-<p>因为$g(x)$在$(1,3)$上单调，要有零点，由零点定理$g(1)\cdot g(3)&lt;0$</p>
-<p>解得$a\in(-\infty,-\frac13)\cup (1,+\infty)$</p>
-<h2 id="零点问题"><a href="#零点问题" class="headerlink" title="零点问题"></a>零点问题</h2><p>$f(x)=(x-2)e^x+a(x-1)^2$有两个零点，求$a$的范围</p>
-<p>$f’(x)=(x-1)(e^x+2a)\rightarrow x_1=1,x_2=\ln(-2a)$，注意到$\ln x$中$x&gt;0$</p>
-<ol>
-<li><p>$a=0$，$f(x)=(x-2)e^x$，有一个零点</p>
-</li>
-<li><p>$a&gt;0$，于$x=1$有极小，$f(1)=-e&lt;0$</p>
-<p>由于函数可能有渐近线，故取$f(2)=a&gt;0$，$x\rightarrow-\infty,(x-2)e^x\rightarrow 0,a(x-1)^2\rightarrow+\infty$故有两个零点</p>
-</li>
-<li><p>当$a&lt;0$时，$\ln(-2a)=1,a=-\frac e2$在$R$上单调增，不成立</p>
-</li>
-<li><p>$\ln(-2a)\le 1,a\ge-\frac e2$，于$(-\infty,\ln(-2a))$和$(1,+\infty)\uparrow$，$(\ln(-2a),1)\downarrow$</p>
-<p>于$x=\ln(-2a)$，有极大值，于$x=1$，有极小值，当$x&lt;1$时$f(x)&lt;0$恒成立，故不成立</p>
-</li>
-<li><p>同理得$\ln(-2a)&gt; 1$，不成立</p>
-</li>
-</ol>
-<p>综上，$a\in(0,+\infty)$</p>
-<h2 id="极值点偏移"><a href="#极值点偏移" class="headerlink" title="极值点偏移"></a>极值点偏移</h2><p>同上题$x_1,x_2$是$f(x)$的两个零点，证明$x_1+x_2&lt;2$</p>
-<p>由第一问的结论，不妨设$x_1&lt;1&lt;x_2$</p>
-<p>$x_1+x_2&lt;2\Longleftrightarrow x_1&lt;2-x_2$</p>
-<p>$x_2&gt;1\Longleftrightarrow -x_2&lt;-1\Longleftrightarrow 2-x_2&lt;1$</p>
-<p>证明$x_1+x_2&lt;2$，因为$2-x_2\in(x_1,1)\rightarrow f(2-x_2)&lt;0$</p>
-<p>记$ f(2-x_2)$为$g(x)$，其中$x&gt;1$</p>
-<p>$\left\{\begin{array}{l} g(x)=-xe^{2-x}+a(x-1)^2\\f(x_2)=0\rightarrow(x-2)e^x+a(x-1)^2=0 \end{array}\right.$</p>
-<p>$g(x)=-xe^{2-x}-(x-2)e^x$</p>
-<p>$g’(x)=(x-1)e^{2-x}-(x-1)e^x=(x-1)(e^{2-x}-e^x)$</p>
-<p>$g(x)$于$(1,+\infty)\downarrow$，$g(1)=0$，故$f(2-x_2)&lt;0$成立</p>
-
+\\BIL\triangle t=mv-mv_0=BLQ</script><script type="math/tex; mode=display">
+\textrm{Photoelectri   Effect}\\\begin{cases}E_{k_0}=h\nu -W_0=U_ce
+\\E_{k_1}=E_{k_0}+U_{正}e\\E_{光强}=nh\nu \end{cases}</script><script type="math/tex; mode=display">
+对于u=U_m\sin(\omega t)\\
+U=\frac{U_m}{\sqrt{2}}\\Q=\frac{U^2}{R}T=\sum_{i=1}^n\frac{U_i}{R}t_i</script><script type="math/tex; mode=display">
+\begin{cases} E=h\nu \\p=\frac{h}{\lambda}\end{cases}</script><script type="math/tex; mode=display">
+\begin{cases} E_{pn}=-k\frac{e^2}{r_n} \\E_{kn}=k\frac{e^2}{2r_n} \end{cases}\Longrightarrow E_n=E_{pn}+E_{kn}=-k\frac{e^2}{2r_n}</script><script type="math/tex; mode=display">
+\triangle p\cdot\triangle x\ge\frac{h}{4\pi}</script><script type="math/tex; mode=display">
+\alpha 衰变\\ \ce{2 _{1}^{1}H +2 _{0}^{1}n -> _{2}^{4}He} \\ \ce{ _{92}^{238}U ->_{90}^{234}Th +_{2}^{4}He}</script><script type="math/tex; mode=display">
+\beta衰变\\\ce{_{0}^{1}n ->  _{1}^{1}H +_{-1}^{0}e}\\\ce{ _{90}^{234}Th -> _{91}^{234}Pa + _{-1}^{0}e}</script>
           
         
       
@@ -861,161 +1042,6 @@ ma=F-BIl=F-B^2L^2Ca\Rightarrow a=\frac{F}{m-B^2L^2C}\triangle</script><script ty
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/21/%E5%8C%96%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/02/21/%E5%8C%96%E5%AD%A6/" itemprop="url">化学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-21T17:55:29+08:00">
-                2021-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="math/tex; mode=display">
-\ce{CH3COOH<=> CH3COO- +H+}\\
-K_a=\ce{\frac{[CH3COOH]}{[CH3COO-][H+]}}
-\\K_{a1}>>K_{a2}>>K_{a3}\\
-
-K=\frac{c \alpha \cdot c \alpha}{c(1-\alpha)}=\frac{c \alpha^{2}}{(1-\alpha)}\approx c\alpha^2\\
-\alpha=\sqrt{\frac K c}</script><script type="math/tex; mode=display">
-\ce{4HNO3\xlongequal{\bigtriangleup 或光照 } 2H2O +4NO2 ^ +O2^}\\</script><script type="math/tex; mode=display">
-\ce{0.1mol/L\,\,Na2A}\\
-\ce{c(H+) +c(Na+)=c(OH^-) +c(HA^-) + 2c(A^2-)}
-\\\ce{c(Na+)=2[c(A^2-) +c(HA^-) + c(H2A)]}</script><p>以二价硫离子生成硫化物沉淀$\rm MS$为例，我们可以推导$\rm\lg[M^{n+}]-{pH}$的直线关系</p>
-<p>首先，在水溶液中，存在如下两个平衡</p>
-<script type="math/tex; mode=display">
-\rm[ M ^ { 2 + } ] = \frac { K _ { s p } } { [ S ^ { 2 - } ] }\qquad和\qquad[ S ^ { 2- } ] = \frac { [ H_2 S ] K _ { a _ { 1 } } K _ { a_2 } } { [H^+] ^ { 2 } }</script><p>消去$\rm [S^{2-}]$，可得</p>
-<script type="math/tex; mode=display">
-\rm[ M ^ { 2 + } ] = \frac { K _ { s p } [ H ^ { + } ] ^ { 2 } } { K _ { a _ { 2 } } [ H _ { 2 } S ] }</script><p>从而</p>
-<script type="math/tex; mode=display">
-\rm lg[M^{2+}]=2lg[H^+]+lg\frac{K_{sp}}{K_{a_1}K_{a_2}[H_2 S]}=-2pH+\textit{h}</script><script type="math/tex; mode=display">
-    \rm 制取Fe^{2+}\rightarrow\begin{cases}\ce{Fe +2H+ =Fe^{2+} +H2}\\ \ce{Fe +2Cu^{2+}=Fe^{2+} +Cu}\end{cases}</script><script type="math/tex; mode=display">
-\ce{Fe(NH4)2·(SO4)2·6H2O}-摩尔盐(复盐)\\
-\ce{FeSO4 +(NH4)2SO4 +6H2O=Fe(NH4)2·(SO4)2·6H2O}</script><p>复盐是由两种金属离子（或铵根离子）和一种酸根离子构成的盐</p>
-<script type="math/tex; mode=display">
-\ce{Fe^{3+}}氧化剂
-\\ \ce{H2S +2Fe^{3+} =2Fe^{2+} +S+\downarrow+ 2H^+}</script><script type="math/tex; mode=display">
-\rm Fe\quad IV\quad 强氧化剂\\
-\ce{4K2FeO4 +10H2O=4Fe(OH)3↓+3O2↑+8KOH}</script><script type="math/tex; mode=display">
-铝土矿的提纯\\
-\ce{铝土矿(Al2O3.xH2O)\xrightarrow[过滤]{NaOH}NaAlO2\xrightarrow[过滤]{足量CO_2}Al2O3
-\xrightarrow{电解(\ce{Na3AlF6})}Al}</script><script type="math/tex; mode=display">
-\ce{Cu2(OH)2CO3}\qquad铜锈俗称铜绿,孔雀石,碱式(\ce{Cu(OH)2})碳酸铜(\ce{CuCO3})\\\ce{Cu2(OH)2CO3\xrightarrow{加热}2CuO +CO2\uparrow +H2O}</script><script type="math/tex; mode=display">
-\ce{Cu3(CO3)2(OH)2}\qquad 蓝铜矿(+1\ce{CuCO3})</script><script type="math/tex; mode=display">
-青铜 -\ce{Cu -Sn-Pb}\\紫铜，又名红铜，是铜单质\\黄铜 -\ce{Cu -Zn}\\ 波尔多液-\ce{CuSO4·xCu(OH)2·yCa(OH)2·zH2O}\\ \ce{CuSO4 -白色}\\\ce{CuSO4.5H2O -蓝色}</script><script type="math/tex; mode=display">
-\ce{Cu(OH)2 + 2NaOH->Na2[Cu(OH)4]}\\
-\ce{Na2[Cu(OH)4] -四羟基合铜酸钠}\\斐林试剂A液B液-0.1g/mL的氢氧化钠溶液和质量浓度为0.05g/mL的硫酸铜溶液.\\
-双缩脲试剂A液B液-0.1g/mL的氢氧化钠溶液和质量浓度为0.01g/mL的硫酸铜溶液.
-\\\ce{2Na2[Cu(OH)4] +C6H12O6 ->Cu2O +4NaOH +C6H12O7 +2H2O}\\\ce{CuO->黑色}\\\ce{Cu2O->砖红色}</script><script type="math/tex; mode=display">
-\ce{CH2=CH2 +Br2->CH2Br-CH2Br}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/20/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1134,6 +1160,8 @@ K=\frac{c \alpha \cdot c \alpha}{c(1-\alpha)}=\frac{c \alpha^{2}}{(1-\alpha)}\ap
 <p>在我们的变换函数中如果有一个点经过函数变换后得到的仍是其本身，那我们的图形就不再前进，这个点就是不动点</p>
 <p>写成矩阵形式为</p>
 <p>$\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \\<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \\<br>0<br>\end{array}\right)$</p>
+<p>化简得</p>
+<p>$ \left(\begin{array}{c}x \\y\end{array}\right) = \left( \begin{array}{c} ( \sqrt { 2 } - 1 ) ( x - y ) + 2 - \sqrt { 2 }  \  ( \sqrt { 2 } - 1 ) ( x + y )\end{array}\right)$</p>
 <p>于是得到一个二元一次方程组</p>
 <p>$\left\{\begin{array}{l}<br> (\sqrt { 2 } - 2 ) x - ( \sqrt { 2 } - 1 ) y + 2 - \sqrt { 2 } = 0  \\<br>(\sqrt { 2 } - 1 ) x + ( \sqrt { 2 } - 2 ) y = 0<br>\end{array}\right.$</p>
 <p>解得</p>
@@ -1162,11 +1190,12 @@ K=\frac{c \alpha \cdot c \alpha}{c(1-\alpha)}=\frac{c \alpha^{2}}{(1-\alpha)}\ap
 <p>所以我们的不动点为</p>
 <p>$\begin{aligned}P&amp;=(2-\sqrt{2}) \frac{1}{1-(\sqrt{2}-1)(1+i)}\\&amp;=\frac{2}{2+\sqrt{2}} \frac{1}{(2-\sqrt{2})-(\sqrt{2}-1) i}\\&amp;=\frac{2}{2-\sqrt{2} i}\end{aligned}$</p>
 <p>同时乘以共轭复数</p>
-<p>$\begin{aligned}P&amp;=\frac{2}{2-\sqrt{2} i} \frac{2+\sqrt{2} i}{2+\sqrt{2} i}\\&amp;=\frac{4+2 \sqrt{2} i}{6}\\&amp;=\frac{2}{3}+\frac{\sqrt{2}}{3} i\end{aligned}$</p>
-<p>这和我们用矩阵方法求解的答案是一样的</p>
+<script type="math/tex; mode=display">
+\begin{aligned}P&=\frac{2}{2-\sqrt{2} i} \frac{2+\sqrt{2} i}{2+\sqrt{2} i}\\&=\frac{4+2 \sqrt{2} i}{6}\\&=\frac{2}{3}+\frac{\sqrt{2}}{3} i\end{aligned}</script><p>这和我们用矩阵方法求解的答案是一样的</p>
 <h3 id="对数螺线"><a href="#对数螺线" class="headerlink" title="对数螺线"></a>对数螺线</h3><p>计算螺线上任意一点$P_n$到不动点$P$的距离</p>
-<p>$\begin{aligned}<br>\left|P-P_{n}\right|&amp;=\left|a \sum_{k=n}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|=\left|a\left(a e^{\frac{\pi}{4} i}\right)^{n} \sum_{k=0}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|\\&amp;=\left|(2-\sqrt{2})((\sqrt{2}-1)(1+i))^{n}\right| \cdot|P|\\&amp;=(2-\sqrt{2})((\sqrt{2}-1) \sqrt{2})^{n} \frac{\sqrt{6}}{3}\\&amp;=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{n+1}\end{aligned}$</p>
-<p>这是一个几何级数，而对数螺线的臂的距离以几何级数递增，所以螺线是对数螺线</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|P-P_{n}\right|&=\left|a \sum_{k=n}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|=\left|a\left(a e^{\frac{\pi}{4} i}\right)^{n} \sum_{k=0}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|\\&=\left|(2-\sqrt{2})((\sqrt{2}-1)(1+i))^{n}\right| \cdot|P|\\&=(2-\sqrt{2})((\sqrt{2}-1) \sqrt{2})^{n} \frac{\sqrt{6}}{3}\\&=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{n+1}\end{aligned}</script><p>这是一个几何级数，而对数螺线的臂的距离以几何级数递增，所以螺线是对数螺线</p>
 <p>实际上，它的方程在极坐标系中表示为</p>
 <p>$r(\theta)=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{\frac{4}{\pi}(\theta-\pi-\arctan (\sqrt{2} / 2))}$</p>
 <p><img src="/2020/09/20/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920183841052.png" alt="image-20200920183841052"></p>
@@ -1876,7 +1905,7 @@ K=\frac{c \alpha \cdot c \alpha}{c(1-\alpha)}=\frac{c \alpha^{2}}{(1-\alpha)}\ap
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
   </nav>
 
 
