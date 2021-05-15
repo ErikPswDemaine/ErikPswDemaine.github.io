@@ -673,7 +673,9 @@ a_n=a_1+(n-1)d
 \\S_n=\frac{n(a_1+a_n)}2=na_1+\frac{n(n-1)}2d</script><h2 id="等比数列"><a href="#等比数列" class="headerlink" title="等比数列"></a>等比数列</h2><script type="math/tex; mode=display">
 a_n=a_1q^{n-1}</script><script type="math/tex; mode=display">
 S_n=\begin{cases}\frac{a_1(1-q^n )}{1-q },q\ne1,\\na_1,q=1\end{cases}\\
-\lim_{x \to \infty} S_n=\frac{a_1}{1-q}</script><h2 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><script type="math/tex; mode=display">
+\lim_{x \to \infty} S_n=\frac{a_1}{1-q}</script><h2 id="通项"><a href="#通项" class="headerlink" title="通项"></a>通项</h2><h3 id="不动点"><a href="#不动点" class="headerlink" title="不动点"></a>不动点</h3><script type="math/tex; mode=display">
+a_{n+1}=pa_n+q \Rightarrow x_0=px_0+q \Rightarrow a_{n+1}-x_0=p(a_n-x_0)</script><h3 id="待定系数"><a href="#待定系数" class="headerlink" title="待定系数"></a>待定系数</h3><script type="math/tex; mode=display">
+a_{n+2}=pa_{n+1}+qa_{n}\Rightarrow a_{n+2}+\lambda a_{n+1}=(p+\lambda)(a_{n+1}+\lambda a_n)</script><h2 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><script type="math/tex; mode=display">
 \sum_{k=1}^nk^2=\frac{n(n+1)(2n+1)}6\\
 \sum_{k=1}^nk^3=\left [ \frac{n(n+1)}{2}\right ]^2</script><h3 id="裂项"><a href="#裂项" class="headerlink" title="裂项"></a>裂项</h3><script type="math/tex; mode=display">
 \frac1{n^2}>\frac1{n(n+1)}=\frac{(n+1)-n}{n(n+1)}=\frac1n-\frac1{n+1}</script><script type="math/tex; mode=display">
@@ -695,9 +697,28 @@ A^m_n=\frac{n}{n-m}A^m_{n=1}\\</script><h2 id="组合"><a href="#组合" class="
 C_n^m=\frac{A^m_n}{m!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m(m-1)(m-2)\cdots3\times2\times1}\\
 C_n^m=C_n^{n-m}\\
 C_n^m=C_{n-1}^m+C_{n-1}^{m-1}\\
-\underbrace {C_r^r + C_{r + 1}^r}_{ = C_{r + 1}^{r + 1} + C_{r + 1}^r = C_{r + 2}^{r + 1}}+C^r_{r+2}+\cdots+C^r_{n}=C^{r+1}_{n+1}</script><h2 id="重复组合"><a href="#重复组合" class="headerlink" title="重复组合"></a>重复组合</h2><script type="math/tex; mode=display">
+\underbrace {C_r^r + C_{r + 1}^r}_{ = C_{r + 1}^{r + 1} + C_{r + 1}^r = C_{r + 2}^{r + 1}}+C^r_{r+2}+\cdots+C^r_{n}=C^{r+1}_{n+1}</script><script type="math/tex; mode=display">
+\sum_{i=0}^nC_n^i=2^n\\</script><script type="math/tex; mode=display">
+\text{Vandermonde} 恒等式</script><script type="math/tex; mode=display">
+C^k_{m+n}=\sum_{i=0}^kC_m^iC_n^{k-i}
+\\C_{2n}^n=\sum_{i=0}^k(C_n^i)^2</script><h2 id="重复组合"><a href="#重复组合" class="headerlink" title="重复组合"></a>重复组合</h2><script type="math/tex; mode=display">
 H_n^m=C_{m+n-1}^m=\sum_{i=1}^mC_{m-1}^{i-1}C_n^i</script><h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><script type="math/tex; mode=display">
-(x+y)^n=\sum_{i=0}^nC_n^ix^iy^{n-i}</script><h1 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h1><h2 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h2><script type="math/tex; mode=display">
+(x+y)^n=\sum_{i=0}^nC_n^ix^{n-i}y^{i}\\
+(1+x)^n=\sum_{i=0}^nC_n^ix^{i}</script><h3 id="赋值法"><a href="#赋值法" class="headerlink" title="赋值法"></a>赋值法</h3><script type="math/tex; mode=display">
+(ax^p+bx^q)^n=a_0+a_1x+a_2x^2+\cdots+a_nx^n=f(x)</script><script type="math/tex; mode=display">
+(a+b)^n=\sum_{i=0}^na_i=f(1)\\
+a_0=f(0)</script><h2 id="多项式定理"><a href="#多项式定理" class="headerlink" title="多项式定理"></a>多项式定理</h2><script type="math/tex; mode=display">
+C_{n}^{n_{1}} C_{n-n_{1}}^{n_{2}} \ldots C_{n-n_{1}-\ldots-n_{k-1}}^{n_{k}}=\frac{n !}{n_{1} ! n_{2} ! \ldots n_{k} !}</script><script type="math/tex; mode=display">
+\left(x_{1}+\ldots+x_{k}\right)^{n}=\sum_{n_{1}+\ldots+n_{k}=n}\left(\begin{array}{ccc} 
+& n & \\
+n_{1} & \ldots & n_{k}
+\end{array}\right) x_{1}^{n_{1}} x_{2}^{n_{2}} \ldots x_{k}^{n_{k}}</script><h2 id="n次方差"><a href="#n次方差" class="headerlink" title="n次方差"></a>n次方差</h2><script type="math/tex; mode=display">
+x^{n}-1=(x-1)\left(x^{n-1}+x^{n-2}+\cdots+x+1\right)</script><script type="math/tex; mode=display">
+\begin{aligned}
+a^{n}-b^{n} &=b^{n}\left(\left(\frac{a}{b}\right)^{n}-1\right) \\
+&=b^{n}\left(\frac{a}{b}-1\right)\left(\left(\frac{a}{b}\right)^{n-1}+\left(\frac{a}{b}\right)^{n-2}+\cdots+\frac{a}{b}+1\right) \\
+&=(a-b)\left(a^{n-1}+a^{n-2} b+\cdots+a b^{n-2}+b^{n-1}\right)
+\end{aligned}</script><h1 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h1><h2 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h2><script type="math/tex; mode=display">
 \frac{n}{\sum\limits_{i = 1}^n \frac{1}{x_i} } \le \sqrt[n]{\prod\limits_{i = 1}^n x_i}  \le \frac{\sum\limits_{i = 1}^n x_i }{n} \le \sqrt {\frac{\sum\limits_{i = 1}^n {x_i}^2 }{n}}</script><h2 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h2><script type="math/tex; mode=display">
 \sum\limits_{i = 1}^n {a_i}^2  \cdot \sum\limits_{i = 1}^n {b_i}^2  \ge {\left( {\sum\limits_{i = 1}^n {a_i} \cdot {b_i} } \right)^2}\\
 等号成立当且仅当\\
@@ -742,7 +763,9 @@ H_n^m=C_{m+n-1}^m=\sum_{i=1}^mC_{m-1}^{i-1}C_n^i</script><h2 id="二项式定理
 s^2=\frac1N\sum^n_{i=1}(x_i-\overline x)^2\\
 s=\sqrt{\frac1N\sum^n_{i=1}(x_i-\overline x)^2}</script><h1 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h1><script type="math/tex; mode=display">
 \vec {AB}=(x,y)</script><script type="math/tex; mode=display">
-{\displaystyle |{\overrightarrow {AB}}|={\overline {AB}}}=\sqrt {x^2 + y^2}</script><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><script type="math/tex; mode=display">
+{\displaystyle |{\overrightarrow {AB}}|={\overline {AB}}}=\sqrt {x^2 + y^2}</script><h2 id="奔驰定理"><a href="#奔驰定理" class="headerlink" title="奔驰定理"></a>奔驰定理</h2><p><img src="/2021/04/03/%E6%95%B0%E5%AD%A6/image-20210508203433526.png" alt="image-20210508203433526"></p>
+<script type="math/tex; mode=display">
+S_{\Delta PBC} \cdot \overrightarrow {AP}  + S_{\Delta PCA} \cdot \overrightarrow {BP}  + S_{\Delta PAB} \cdot \overrightarrow {CP}  = \overrightarrow 0</script><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><script type="math/tex; mode=display">
 \left\{ \begin{gathered}
   {\text{N}  } \to 0,1,2 \cdots  \hfill \\
   { {\text{N}  }^*}{\text{/} }{ {\text{N}  }_ + } \to 1,2 \cdots  \hfill \\
