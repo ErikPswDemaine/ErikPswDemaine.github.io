@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="趣题组合数学  魔法少女小圆第十话   (1+n)^p-n^p-1\;\;\text{mod}\;\;p\equiv 0\quad p为素数 \cancel{C_p^0}+ \underbrace {C_p^1n^1+C_p^2n^2+\cdots+C_p^{p-1}n^{p-1}} _{有p这个因子} +\cancel{C_p^pn^p}-\cancel{n^p}-\cancel{1}\;\;\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学&#x2F;趣题">
+<meta property="og:url" content="http://yoursite.com/2021/05/22/%E6%95%B0%E5%AD%A6/%E8%B6%A3%E9%A2%98/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="趣题组合数学  魔法少女小圆第十话   (1+n)^p-n^p-1\;\;\text{mod}\;\;p\equiv 0\quad p为素数 \cancel{C_p^0}+ \underbrace {C_p^1n^1+C_p^2n^2+\cdots+C_p^{p-1}n^{p-1}} _{有p这个因子} +\cancel{C_p^pn^p}-\cancel{n^p}-\cancel{1}\;\;\">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E6%95%B0%E5%AD%A6/%E8%B6%A3%E9%A2%98/image-20210516212042493.png">
+<meta property="article:published_time" content="2021-05-22T14:54:12.416Z">
+<meta property="article:modified_time" content="2021-05-22T14:47:12.370Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2021/05/22/%E6%95%B0%E5%AD%A6/%E8%B6%A3%E9%A2%98/image-20210516212042493.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/05/22/数学/趣题/"/>
+
+
+
+
+
+  <title>数学/趣题 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/22/%E6%95%B0%E5%AD%A6/%E8%B6%A3%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数学/趣题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-22T22:54:12+08:00">
+                2021-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="趣题"><a href="#趣题" class="headerlink" title="趣题"></a>趣题</h1><h2 id="组合数学"><a href="#组合数学" class="headerlink" title="组合数学"></a>组合数学</h2><p><img src="/2021/05/22/%E6%95%B0%E5%AD%A6/%E8%B6%A3%E9%A2%98/image-20210516212042493.png" alt="image-20210516212042493"></p>
+<blockquote>
+<p>魔法少女小圆第十话</p>
+</blockquote>
+<script type="math/tex; mode=display">
+(1+n)^p-n^p-1\;\;\text{mod}\;\;p\equiv 0\quad p为素数</script><script type="math/tex; mode=display">
+\cancel{C_p^0}+
+\underbrace {C_p^1n^1+C_p^2n^2+\cdots+C_p^{p-1}n^{p-1}}
+_{有p这个因子}
++\cancel{C_p^pn^p}-\cancel{n^p}-\cancel{1}\;\;\text{mod}\;\;p\equiv 0</script><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><h3 id="分离参数"><a href="#分离参数" class="headerlink" title="分离参数"></a>分离参数</h3><p>1.函数$f(x)=\frac12ax^2-2ax+\ln x$在$(1,3)$上不单调，求$a$的范围</p>
+<p>$<1>$</1></p>
+<p>$f’(x)=ax-2a+\frac1x$，不单调，故$f’(x)=0$在$x\in(1,3)$上有解</p>
+<p>分离参数$a=\frac{1}{-x^2+2x}$</p>
+<p>因为$-x^2+2x\in(-3,1)$，故$a\in(-\infty,-\frac13)\cup (1,+\infty)$</p>
+<p>$<2>$</2></p>
+<p>$f’(x)=\frac{ax^2-2ax+1}{x}$，若不为二次函数，即$a=0$时，显然不成立</p>
+<p>记$g(x)=ax^2-2ax+1$，其对称轴为$x=1$</p>
+<p>因为$g(x)$在$(1,3)$上单调，要有零点，由零点定理$g(1)\cdot g(3)&lt;0$</p>
+<p>解得$a\in(-\infty,-\frac13)\cup (1,+\infty)$</p>
+<h3 id="极值点偏移"><a href="#极值点偏移" class="headerlink" title="极值点偏移"></a>极值点偏移</h3><p>函数$f(x)$于$x=x_0$处有极小值，但当$x&gt;x_0$时，函数增长更快，于是有$x_m=\frac{x_1+x_2}{2}&lt;x_0\rightarrow x_1+x_2&lt;2x_0$，这就是极值点偏移，下面我们来看一道例题</p>
+<p>$f(x)=(x-2)e^x+a(x-1)^2$有两个零点</p>
+<p>$f’(x)=(x-1)(e^x+2a)\rightarrow x_1=1,x_2=\ln(-2a)$</p>
+<p>由第一问得$a\in(0,+\infty)$</p>
+<p>不妨设$x_1&lt;1&lt;x_2$</p>
+<p>$x_1+x_2&lt;2\Longleftrightarrow x_1&lt;2-x_2$</p>
+<p>$x_2&gt;1\Longleftrightarrow -x_2&lt;-1\Longleftrightarrow 2-x_2&lt;1$</p>
+<p>证明$x_1+x_2&lt;2$，因为$2-x_2\in(x_1,1)\rightarrow f(2-x_2)&lt;0$</p>
+<p>记$ f(2-x_2)$为$g(x)$，其中$x&gt;1$</p>
+<p>$\begin{cases} g(x)=-xe^{2-x}+a(x-1)^2\\f(x_2)=0\rightarrow(x-2)e^x+a(x-1)^2=0 \end{cases}$</p>
+<p>$g(x)=-xe^{2-x}-(x-2)e^x$</p>
+<p>$g’(x)=(x-1)e^{2-x}-(x-1)e^x=(x-1)(e^{2-x}-e^x)$</p>
+<p>$g(x)$于$(1,+\infty)\downarrow$，$g(1)=0$，故$f(2-x_2)&lt;0$成立</p>
+<h2 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h2><p>从十个球中取出三个球，放回，求第二次取出球中至少有一个球与第一次取出的三个球中的一个相同的概率</p>
+<h3 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h3><script type="math/tex; mode=display">
+P(至少一个一样)=1-P(都不一样)=1-\frac{\mathrm{C}^3_7}{\mathrm{C}_{10}^3}=1-\frac{35}{120}=\frac{17}{24}=70.8\%</script><h3 id="反算法"><a href="#反算法" class="headerlink" title="反算法"></a>反算法</h3><p>三个全不一样</p>
+<script type="math/tex; mode=display">
+P(至少一个一样)=1-P(都不一样)=1-\frac{7}{10}\times\frac{6}{9}\times\frac{5}{8}=\frac{17}{24}=70.8\%</script><h3 id="直接法"><a href="#直接法" class="headerlink" title="直接法"></a>直接法</h3><p>只有一个一样，其余两个不一样</p>
+<script type="math/tex; mode=display">
+P_1=\frac{3}{10}\times\frac{7}{9}\times\frac{6}{8}\times3=\frac{21}{40}</script><p>只有两个一样，其余一个不一样</p>
+<script type="math/tex; mode=display">
+P_2=\frac{3}{10}\times\frac{2}{9}\times\frac{7}{8}\times3=\frac{7}{40}</script><p>三个一样</p>
+<script type="math/tex; mode=display">
+P_3=\frac{3}{10}\times\frac{2}{9}\times\frac{1}{8}=\frac{1}{120}</script><script type="math/tex; mode=display">
+P=P_1+P_2+P_3=\frac{17}{24}=70.8\%</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/22/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/" rel="next" title="数学/解析几何">
+                <i class="fa fa-chevron-left"></i> 数学/解析几何
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/22/%E6%95%B0%E5%AD%A6/%E9%9B%86%E5%90%88/" rel="prev" title="数学/集合">
+                数学/集合 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#趣题"><span class="nav-number">1.</span> <span class="nav-text">趣题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组合数学"><span class="nav-number">1.1.</span> <span class="nav-text">组合数学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导数"><span class="nav-number">1.2.</span> <span class="nav-text">导数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分离参数"><span class="nav-number">1.2.1.</span> <span class="nav-text">分离参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极值点偏移"><span class="nav-number">1.2.2.</span> <span class="nav-text">极值点偏移</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概率"><span class="nav-number">1.3.</span> <span class="nav-text">概率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排列组合"><span class="nav-number">1.3.1.</span> <span class="nav-text">排列组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反算法"><span class="nav-number">1.3.2.</span> <span class="nav-text">反算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接法"><span class="nav-number">1.3.3.</span> <span class="nav-text">直接法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
