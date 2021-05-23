@@ -102,7 +102,7 @@
 <meta property="og:description" content="数列等差数列 a_n&#x3D;a_1+(n-1)d \\S_n&#x3D;\frac{n(a_1+a_n)}2&#x3D;na_1+\frac{n(n-1)}2d等比数列 a_n&#x3D;a_1q^{n-1} S_n&#x3D;\begin{cases}\frac{a_1(1-q^n )}{1-q },q\ne1,\\na_1,q&#x3D;1\end{cases}\\ \lim_{x \to \infty} S_n&#x3D;\frac{a_1}{1-q}通项">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-22T14:54:12.401Z">
-<meta property="article:modified_time" content="2021-05-22T14:48:11.641Z">
+<meta property="article:modified_time" content="2021-05-23T00:02:10.587Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -345,7 +345,17 @@ a_{n+2}=pa_{n+1}+qa_{n}\Rightarrow a_{n+2}+\lambda a_{n+1}=(p+\lambda)(a_{n+1}+\
 \sum_{k=1}^nk^2=\frac{n(n+1)(2n+1)}6\\
 \sum_{k=1}^nk^3=\left [ \frac{n(n+1)}{2}\right ]^2</script><h3 id="裂项"><a href="#裂项" class="headerlink" title="裂项"></a>裂项</h3><script type="math/tex; mode=display">
 \frac1{n^2}>\frac1{n(n+1)}=\frac{(n+1)-n}{n(n+1)}=\frac1n-\frac1{n+1}</script><script type="math/tex; mode=display">
-\frac{1}{\sqrt {n + 1}  + \sqrt n } = \sqrt {n + 1}  - \sqrt n</script>
+\frac{1}{\sqrt {n + 1}  + \sqrt n } = \sqrt {n + 1}  - \sqrt n</script><h3 id="错位相减"><a href="#错位相减" class="headerlink" title="错位相减"></a>错位相减</h3><script type="math/tex; mode=display">
+a_n=a_1+(n-1)d\quad\quad b_n=b_1q^{n-1}</script><script type="math/tex; mode=display">
+\begin{cases}T_{n}=a_{1} b_{1}+a_{2} b_{2}+a_{3} b_{3}+\cdots+a_{n-1} b_{n-1}+a_{n} b_{n}\\
+q T_{n}=a_{1} b_{2}+a_{2} b_{3}+a_{3} b_{4}+\cdots+a_{n-1} b_{n}+q a_{n} b_{n}\end{cases}</script><script type="math/tex; mode=display">
+\begin{aligned}
+T_{n}-q T_{n} &=a_{1} b_{1}+d\left(b_{2}+b_{2}+\cdots+b_{n}\right)-q a_{n} b_{n} \\
+&=a_{1} b_{1}+d\left(\frac{b_{1}\left(1-q^{n}\right)}{1-q}-b_{1}\right)-q a_{n} b_{n} \\
+&=a_{1} b_{1}+d\left(S_{n}-b_{1}\right)-q a_{n} b_{n} \\
+&=\left(a_{1}-d\right) b_{1}+d S_{n}-q a_{n} b_{n}
+\end{aligned}</script><script type="math/tex; mode=display">
+T_{n}=\frac{\left(a_{1}-d\right) b_{1}+d S_{n}-q a_{n} b_{n}}{1-q}</script>
       
     </div>
     
@@ -458,7 +468,7 @@ a_{n+2}=pa_{n+1}+qa_{n}\Rightarrow a_{n+2}+\lambda a_{n+1}=(p+\lambda)(a_{n+1}+\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -521,7 +531,7 @@ a_{n+2}=pa_{n+1}+qa_{n}\Rightarrow a_{n+2}+\lambda a_{n+1}=(p+\lambda)(a_{n+1}+\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数列"><span class="nav-number">1.</span> <span class="nav-text">数列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#等差数列"><span class="nav-number">1.1.</span> <span class="nav-text">等差数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等比数列"><span class="nav-number">1.2.</span> <span class="nav-text">等比数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通项"><span class="nav-number">1.3.</span> <span class="nav-text">通项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不动点"><span class="nav-number">1.3.1.</span> <span class="nav-text">不动点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#待定系数"><span class="nav-number">1.3.2.</span> <span class="nav-text">待定系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求和"><span class="nav-number">1.4.</span> <span class="nav-text">求和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公式"><span class="nav-number">1.4.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#裂项"><span class="nav-number">1.4.2.</span> <span class="nav-text">裂项</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数列"><span class="nav-number">1.</span> <span class="nav-text">数列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#等差数列"><span class="nav-number">1.1.</span> <span class="nav-text">等差数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等比数列"><span class="nav-number">1.2.</span> <span class="nav-text">等比数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通项"><span class="nav-number">1.3.</span> <span class="nav-text">通项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不动点"><span class="nav-number">1.3.1.</span> <span class="nav-text">不动点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#待定系数"><span class="nav-number">1.3.2.</span> <span class="nav-text">待定系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求和"><span class="nav-number">1.4.</span> <span class="nav-text">求和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公式"><span class="nav-number">1.4.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#裂项"><span class="nav-number">1.4.2.</span> <span class="nav-text">裂项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错位相减"><span class="nav-number">1.4.3.</span> <span class="nav-text">错位相减</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
